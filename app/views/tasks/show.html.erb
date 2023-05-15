@@ -1,0 +1,21 @@
+<h1>Ma tâche</h1>
+<div class="row">
+  <div class="row">
+    <div class="col">
+      <h2><%= @task.title %></h2>
+    </div>
+    <div class="col">
+      <%= link_to edit_task_path, class: "btn btn-primary float-end" do %>
+        <i class="fa-solid fa-pen-to-square"></i> Modifier cette tâche
+      <% end %>
+    </div>
+
+
+  </div>
+
+  <p><%= @task.details %></p>
+  <p><%= @task.completed %></p>
+
+</div>
+<hr>
+<%= link_to "Retour",tasks_path, class: "btn btn-primary" %>
