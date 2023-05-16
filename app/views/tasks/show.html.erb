@@ -9,13 +9,12 @@
         <i class="fa-solid fa-pen-to-square"></i> Modifier cette tâche
       <% end %>
     </div>
-
-
   </div>
-
   <p><%= @task.details %></p>
-  <p><%= @task.completed %></p>
-
+  <div>
+    <input type="checkbox" id="completed" <% if @task.completed %>checked<% end %> disabled>
+    <label for="completed"><% if @task.completed %> Cette tâche est terminé <% else %> Cette tâche n'est pas encore terminée <% end %> </label>
+  </div>
 </div>
 <hr>
 <%= link_to "Retour",tasks_path, class: "btn btn-primary" %>
